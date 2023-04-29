@@ -40,6 +40,18 @@ export const NavBar = () => {
                 </li>
                 </NavLink>
 
+                <NavLink to="/APIs">
+                <li>
+                    <FavoriteIcon /> API's
+                </li>
+                </NavLink>
+
+                <NavLink to="/song-search">
+                <li>
+                    <FavoriteIcon /> SongSearch
+                </li>
+                </NavLink>
+                
                 <li>
                     <ReceiptIcon /> Promociones
                 </li>

@@ -9,6 +9,8 @@ import { Store } from "./components/E-commerce/Store";
 import { Lookbook } from "./components/Routes/Lookbook";
 import { ItemList } from "./components/HooksData/ItemList";
 import { RequestProvider } from "./components/HooksData/requestContainer";
+import { ApiContainer } from "./components/API/ApiContainer";
+import SongSearch from "./components/SongSearch/SongSearch";
 
 
 
@@ -25,6 +27,8 @@ function App() {
           <Route exact path={"/e-commerce/store"} element={<Store/> }/>
           <Route exact path={"/lookbook"} element={<Lookbook /> } />
           <Route exact path={"/fav"} element={<ItemList /> } />
+          <Route exact path={"/APIs"} element={<ApiContainer /> } />
+          <Route exact path={"/song-search"} element={<SongSearch /> } />
 
         </Routes>
       </BrowserRouter>
