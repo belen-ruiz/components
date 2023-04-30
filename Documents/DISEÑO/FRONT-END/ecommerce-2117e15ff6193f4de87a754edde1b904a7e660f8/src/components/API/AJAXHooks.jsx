@@ -17,13 +17,13 @@ export const AJAXHooks = () => {
       const getPokemons = async (url) => {
         let res = await fetch(url),
           json = await res.json();
-        //console.log(json);
+        console.log(json);
   
         json.results.forEach(async (el) => {
           let res = await fetch(el.url),
             json = await res.json();
-  
-          //console.log(json);
+          console.log(json);
+          
           let pokemon = {
             id: json.id,
             name: json.name,
