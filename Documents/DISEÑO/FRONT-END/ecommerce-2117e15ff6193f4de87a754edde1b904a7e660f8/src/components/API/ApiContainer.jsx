@@ -1,13 +1,13 @@
 import React from 'react'
 import { AJAXHooks } from './AJAXHooks'
-import DataList from './DataList'
+import ItemList from './ItemList'
 
 export const ApiContainer = () => {
   return (
     <>
         <div>ApiContainer</div>
         <AJAXHooks />
-        <DataList />
+        <ItemList />
     </>
   )
 }

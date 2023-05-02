@@ -13,7 +13,7 @@ const Item = ({ avatar, name }) => {
   );
 }
 
-export default function DataList() {
+export default function ItemList() {
   let url = "https://pokeapi.co/api/v2/pokemon/";
   //url = "https://jsonplaceholder.typicode.com/users";
 

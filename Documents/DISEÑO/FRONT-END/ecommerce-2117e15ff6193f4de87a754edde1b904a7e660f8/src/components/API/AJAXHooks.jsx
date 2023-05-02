@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 
-//// desestructurado en {apiContainer + useFetch}
+//// desestructurado en {ItemList + useFetch}
 function Pokemon({ avatar, name }) {
     return (
       <figure>
