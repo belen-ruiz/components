@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+
+//// desestructurado en {apiContainer + useFetch}
 function Pokemon({ avatar, name }) {
     return (
       <figure>
@@ -22,7 +24,7 @@ export const AJAXHooks = () => {
         json.results.forEach(async (el) => {
           let res = await fetch(el.url),
             json = await res.json();
-          console.log(json);
+          //console.log(json);
           
           let pokemon = {
             id: json.id,
@@ -36,6 +38,8 @@ export const AJAXHooks = () => {
   
       getPokemons("https://pokeapi.co/api/v2/pokemon/");
     }, []);
+
+    console.log(pokemons)
   return (
       <>
       <div>AJAXHooks</div>

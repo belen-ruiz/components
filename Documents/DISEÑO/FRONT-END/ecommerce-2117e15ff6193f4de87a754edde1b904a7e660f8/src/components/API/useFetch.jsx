@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useFetch = (url) => {
-  const [data, setData] = useState([null]);
+  const [data, setData] = useState([]);
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
@@ -24,19 +24,18 @@ export const useFetch = (url) => {
         data.results.forEach(async (el) => {
           let res = await fetch(el.url),
               data = await res.json();
-         // console.log(data); //ok
+              //console.log(data); //ok
           
-          // let dataItem = {
-          //   id: json.id,
-          //   name: json.name,
-          //   //avatar: json.sprites.front_default,
-          // };
-          // //setData((data) => [...data, dataItem]);
-
-          // setData([...data, dataItem]);
+               let dataItem = {
+                 id: data.id,
+                 name: data.name,
+                 avatar: data.sprites.front_default,
+               };
+            
+           setData((data) => [...data, dataItem]);
           
-          setData(data)
-          console.log(data)
+          // setData(data)
+          // console.log(data)
 
         });
 
@@ -50,7 +49,9 @@ export const useFetch = (url) => {
     };
 
     getData(url);
-  }, [url]);
+  }, []);
+
+  console.log(data)
 
   return { data, isPending, error };
 };
