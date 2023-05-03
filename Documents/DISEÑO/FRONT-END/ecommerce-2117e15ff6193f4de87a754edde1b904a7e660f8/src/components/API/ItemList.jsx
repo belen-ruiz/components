@@ -1,40 +1,28 @@
 import React from "react";
 import { useFetch } from "./useFetch";
+import { Item } from "./Item"
 
-const Item = ({ avatar, name }) => {
-  
-  return (
-    <div style= {{display: "inline-flex"}}>
-    <figure>
-      <img src={avatar} alt={name} />
-      <figcaption>{name}</figcaption>
-    </figure>
-    </div>
-  );
-}
 
 export default function ItemList() {
   let url = "https://pokeapi.co/api/v2/pokemon/";
-  //url = "https://jsonplaceholder.typicode.com/users";
 
-  let { data, isPending, error } = useFetch(url);
-  let pending = JSON.stringify(isPending)
+  let { data, loading, error } = useFetch(url);
+  //let isLoading = JSON.stringify(loading)
   let err = JSON.stringify(error)
 
   
   return (
     <>
       <h2>Hooks Personalizados</h2>
+      {/* {loading && <h3>Cargando...</h3>} */}
       
-      {data.length === 0 ? (
+      {!data ? (
           <div>
-            <h3>Cargando...</h3>
-            <h3>{pending}</h3>
             <h3>{err}</h3>
           </div>
         ) : (
-          data.map((el) => (
-            <Item key={el.id} name={el.name} avatar={el.avatar} />
+          data.map((item) => (
+            <Item key={item.id} name={item.name} avatar={item.avatar} />
           ))
         )}
 
