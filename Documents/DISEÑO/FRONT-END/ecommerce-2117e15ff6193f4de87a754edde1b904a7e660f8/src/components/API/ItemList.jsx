@@ -7,7 +7,7 @@ export default function ItemList() {
   let url = "https://pokeapi.co/api/v2/pokemon/";
 
   let { data, loading, error } = useFetch(url);
-  //let isLoading = JSON.stringify(loading)
+  let isLoading = JSON.stringify(loading)
   let err = JSON.stringify(error)
 
   

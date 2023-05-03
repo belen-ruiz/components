@@ -18,13 +18,13 @@ const Article = styled.article`
         display: flex;
     `}
 `
-const ModalContainer = styled.button`
+const ModalContainer = styled.div`
     position: relative;
     padding: 1rem;
-    min-width: 320px;
+    min-width: 90vw;
     max-width: 480px;
     min-height: 200px;
-    max-height: 600px;
+    max-height: 100vh;
     overflow-y: auto;
     background-color: #fff;
 `
