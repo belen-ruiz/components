@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import ReactDOM from "react-dom";
 
 
 const Article = styled.article`
@@ -38,7 +39,7 @@ const BtnModalClose = styled.button`
 export const Modal = ({ children, isOpen, closeModal }) => {
   const handleModalContainerClick = (e) => e.stopPropagation();
 
-  return (
+  return ReactDOM.createPortal(
     <Article onClick={closeModal} active={isOpen}>
       <ModalContainer onClick={handleModalContainerClick}>
         <BtnModalClose onClick={closeModal}>
@@ -46,7 +47,8 @@ export const Modal = ({ children, isOpen, closeModal }) => {
         </BtnModalClose>
         {children}
       </ModalContainer>
-    </Article>
+    </Article>,
+    document.getElementById("modal")
   );
 };
 
