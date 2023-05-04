@@ -51,6 +51,12 @@ export const NavBar = () => {
                     <FavoriteIcon /> SongSearch
                 </li>
                 </NavLink>
+
+                <NavLink to="/topics">
+                <li>
+                    <FavoriteIcon /> Topics
+                </li>
+                </NavLink>
                 
                 <li>
                     <ReceiptIcon /> Promociones

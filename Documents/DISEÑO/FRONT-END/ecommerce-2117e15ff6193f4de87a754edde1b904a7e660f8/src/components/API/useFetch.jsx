@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useFetch = (url) => {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState([]); //null?
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -11,7 +11,7 @@ export const useFetch = (url) => {
                 let res = await fetch(url);
 
                 if (!res.ok) {
-                    throw {
+                throw {
                         err: true,
                         status: res.status,
                         statusText: !res.statusText
@@ -37,7 +37,7 @@ export const useFetch = (url) => {
                         setData((data) => [...data, dataItem]);
                         // console.log(data)
                     });
-                }, 2000);
+                }, 3000);
                 
 
                 setLoading(false);
