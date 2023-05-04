@@ -3,7 +3,7 @@ import { useFetch } from "../../API/useFetch";
 // import Message from "./Message";
 
 const SelectList = ({ title, handleChange }) => {
-    const url = ` https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre`
+    const url = `https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre`
     
     const { data, error, loading } = useFetch(url);
     //console.log(data, error, loading);

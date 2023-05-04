@@ -3,6 +3,9 @@ import { Modal } from "./Modal";
 import { ModalContent } from "./ModalContent";
 import { SignUpMaterial } from "../Forms/Form/SignUpMaterial";
 import { Formularios } from "../Forms/FormValidated/Formularios";
+import { NavLink } from 'react-router-dom';
+import { User } from '../Usuarios/User';
+
 
 export const ModalsContainer = () => {
   const [isOpenModal1, openModal1, closeModal1] = useModal(false);
@@ -31,6 +34,13 @@ export const ModalsContainer = () => {
       <Modal isOpen={isOpenModal4} closeModal={closeModal4}>
         <Formularios />
       </Modal>
+      <NavLink to="/usuario/belenruiz">
+          PERFIL BELEN RUIZ
+      </NavLink>
+      <NavLink to="/productos">
+          Pagination
+      </NavLink>
+     
     </div>
   );
 };

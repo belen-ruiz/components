@@ -31,7 +31,6 @@ export const Formularios = () => {
             <form onSubmit={handleSubmit}>
               {inputs && 
                 inputs.map((input)=> 
-                  <>            
                     <input
                       key={input.name}
                       type={input.type}
@@ -42,7 +41,6 @@ export const Formularios = () => {
                       required={input.required}
                       value={value}
                       />
-                  </>
                 )}
 
                 <textarea

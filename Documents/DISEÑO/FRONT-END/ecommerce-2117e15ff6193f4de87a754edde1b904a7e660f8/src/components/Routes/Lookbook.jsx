@@ -1,5 +1,5 @@
 import React from 'react'
-import { Data } from '../E-commerce/Data'
+import { DataSombreros } from '../Data/DataSombreros'
 import SelectList from '../Form/Selects/SelectList'
 
 export const Lookbook = () => {
@@ -8,7 +8,7 @@ export const Lookbook = () => {
     
         <div>Lookbook</div> 
         <SelectList />
-        <Data />
+        <DataSombreros />
 
     </>
   )

@@ -1,9 +1,9 @@
+
 import styled from 'styled-components/macro';
 import { useEffect, useState } from 'react';
-import { popularProducts } from "../Data/Data";
-import { DestacadosItem } from "./DestacadosItem";
+
 //lista de todos los prod
-export const Data = ({ }) => {
+export const DataSombreros = ({ }) => {
   const [items, setItems] = useState([]); 
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export const Data = ({ }) => {
 
         setItems(result)
 
-        
+
         // result.forEach(async (el)=>{
         //     let res = await fetch(el.id)
         //     json = await res.json()
@@ -36,7 +36,7 @@ export const Data = ({ }) => {
 
 
   }, [])
-  
+
   console.log(items)
 
     //getItems("https://pokeapi.co/api/v2/pokemon/")

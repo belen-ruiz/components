@@ -19,7 +19,7 @@ export const SelectsAnidados = () => {
           setState(e.target.value);
         }}
       />
-      {/* {state && (
+      {state && (
         <SelectList
           title="municipios"
           url={`https://api-sepomex.hckdrk.mx/query/get_municipio_por_estado/${state}?token=${TOKEN}`}
@@ -27,8 +27,8 @@ export const SelectsAnidados = () => {
             setTown(e.target.value);
           }}
         />
-      )} */}
-      {/* {town && (
+      )}
+      {town && (
         <SelectList
           title="colonia"
           url={`https://api-sepomex.hckdrk.mx/query/get_colonia_por_municipio/${town}?token=${TOKEN}`}
@@ -36,7 +36,7 @@ export const SelectsAnidados = () => {
             setSuburb(e.target.value);
           }}
         />
-      )} */}
+      )}
       {/* <pre>
         <code>
           {state} - {town} - {suburb}

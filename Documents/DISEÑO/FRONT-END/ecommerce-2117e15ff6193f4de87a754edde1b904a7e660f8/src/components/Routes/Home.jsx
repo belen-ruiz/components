@@ -5,13 +5,13 @@ import { Dropdown } from '../Dropdowns/DropdownMyApps/Dropdown';
 import { ModalsContainer } from '../Modal2/ModalsContainer';
 import { Search } from '../SearchBar/Search';
 
-
 export const Home = () => {
   return (
     <>
         <Announcement />
         <Dropdown />
         <ModalsContainer />
+        
         <CarrouselContainer/>
     </>
   )
